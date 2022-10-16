@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#419A9999"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="151dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="55dp"
+        android:elevation="5dp"
+        android:src="@drawable/city"
+        app:layout_constraintBottom_toBottomOf="@+id/cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+
+        android:id="@+id/view"
+        android:layout_width="413dp"
+        android:layout_height="302dp"
+        android:background="@drawable/arka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="239dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="20dp"
+        android:background="#F1F0F0"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/buton"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1F0F0"
+            android:gravity="bottom|clip_horizontal|center|clip_vertical|start|right|center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sehirGirdi"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autoText="false"
+                android:backgroundTint="#56BDFB"
+                android:hint="ŞEHİR İSMİ GİRİN."
+                android:shadowColor="#28A5F1"
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="303dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="50dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:layout_width="301dp"
+            android:layout_height="match_parent"
+            android:background="#F1F0F0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sehirAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <ImageView
+                android:id="@+id/durumFoti"
+                android:layout_width="159dp"
+                android:layout_height="121dp"
+                android:src="@drawable/cicek" />
+
+            <TextView
+                android:id="@+id/derece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/havaTahmini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buton"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#5EBBF4"
+
+        android:src="@drawable/arama"
+        app:backgroundTint="#00B8D4"
+        app:layout_constraintBottom_toBottomOf="@+id/cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardview"
+        app:layout_constraintVertical_bias="0.409" />
+</androidx.constraintlayout.widget.ConstraintLayout>
